@@ -207,7 +207,65 @@ Create a new project:
 Project Name: boardgames-devops
 ```
 
-Push your application code to the repository.
+---
+
+## STEP 8.1 — Open Azure DevOps
+
+Go to:
+
+```
+Azure DevOps → Your Project → Repos
+```
+
+---
+
+## STEP 8.2 — Import Repository
+
+Click:
+
+```
+Repos → Import Repository
+```
+
+---
+
+## STEP 8.3 — Enter GitHub Repository URL
+
+Use the following GitHub repository as the source:
+
+```
+https://github.com/Nishath06/Board-Game-Azure-DevOps-Implementation-.git
+```
+
+Azure DevOps will automatically import the complete repository into Azure Repos.
+
+---
+
+## STEP 8.4 — Verify Import
+
+After importing, your project files should appear inside:
+
+```
+Azure DevOps → Repos → Files
+```
+
+The CI pipeline will now use **Azure Repos** as the source repository.
+
+---
+
+## 📌 Repository Flow
+
+```mermaid
+flowchart LR
+    A[GitHub Repository] --> B[Azure Repos]
+    B --> C[Azure DevOps CI Pipeline]
+    C --> D[AWS EC2 Self-Hosted Agent]
+    
+    style A fill:#24292e,color:#fff
+    style B fill:#0078d4,color:#fff
+    style C fill:#fff4e1
+    style D fill:#ff9900,color:#fff
+```
 
 ---
 
